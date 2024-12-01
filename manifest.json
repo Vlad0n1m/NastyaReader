@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "NastyaReader",
+  "version": "1.0",
+  "description": "NastyaReader помогает вам читать тексты быстрее с помощью различных инструментов, таких как выделение ключевых слов, изменение скорости прокрутки и оптимизированное форматирование текста.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon16.png",
+    "default_title": "Открыть NastyaReader"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

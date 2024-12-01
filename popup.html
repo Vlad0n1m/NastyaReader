@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NastyaReader</title>
+    <style>
+        body {
+            max-width: 350px;
+            min-width: 350px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffdde1;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #ff007f;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle {
+            width: 50px;
+            height: 24px;
+            background-color: #ccc;
+            border-radius: 12px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        .toggle::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: left 0.3s;
+        }
+
+        input[type="checkbox"]:checked + .toggle {
+            background-color: #ff007f;
+        }
+
+        input[type="checkbox"]:checked + .toggle::before {
+            left: 28px;
+        }
+
+        .github-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .github-link a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff007f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .github-link a:hover {
+            background-color: #e60072;
+        }
+    </style>
+</head>
+<body>
+<h1>NastyaReader</h1>
+<p>Расширение помогает быстро воспринимать текст, выделяя первые символы слов для лучшего захвата взгляда. Вы можете включать или отключать работу расширения на текущем сайте с помощью переключателя ниже.</p>
+<label>
+    <input type="checkbox" id="toggle-switch">
+    <div class="toggle"></div>
+</label>
+<div class="github-link">
+    <a href="https://github.com/your-username/nastyareader" target="_blank">GitHub проекта</a>
+</div>
+<footer><p>Сделано с любовью ❤ </p>️</footer>
+
+<script src="popup.js"></script>
+<script src="content.js"></script>
+</body>
+</html>
